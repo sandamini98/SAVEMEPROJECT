@@ -12,6 +12,7 @@ const Header = () => {
         <Box display="flex">
           <Tabs>
             <Tab label="All Blogs"/>
+            <Tab label="My Blogs"/>
           </Tabs>
         </Box>
         <Box display="flex" marginLeft="auto">
