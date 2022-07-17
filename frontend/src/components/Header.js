@@ -6,10 +6,18 @@ const Header = () => {
       <Toolbar>
         <Typography variant="h4">Save Me</Typography>
         <Box display="flex" marginLeft="auto">
-            <Button sx={{margin:1,borderRadius:10}} color="warning">
+            <Button 
+                variant='contained' 
+                sx={{margin:1,borderRadius:10}} 
+                color="warning"
+            >
                 Login
             </Button>
-            <Button sx={{margin:1,borderRadius:10}} color="warning">
+            <Button 
+                variant='contained' 
+                sx={{margin:1,borderRadius:10}} 
+                color="warning"
+            >
                 Signup
             </Button>
         </Box>
