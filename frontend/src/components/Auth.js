@@ -16,21 +16,26 @@ const Auth = () => {
             [e.target.name]: e.target.value
         }));
     };
-    const sendRequest = async ()=> {
-       const res = await axios.post("http://localhost:5000/api/user/login",{
+    const sendRequest = async (type="login")=> {
+       const res = await axios.post(`http://localhost:5000/api/user/${type}`, {
+            name: inputs.name,
             email:inputs.email,
-            password:inputs.password
+            password:inputs.password,
         }).catch(err=>console.log(err));
 
         const data = await res.data;
         return data;
-    }
+    };
 
     const handleSubmit = (e)=>{
         e.preventDefault()
         console.log(inputs);
-        sendRequest();
-    }
+        if(isSignup) {
+        sendRequest("signup").then(data=>console.log(data));
+        } else{
+          sendRequest().then((data)=>console.log(data));
+    }   
+    };
     return (
         <div>
            <form onSubmit={handleSubmit}>
