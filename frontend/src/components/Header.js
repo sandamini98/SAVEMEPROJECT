@@ -1,10 +1,19 @@
 import React from 'react'
-import {AppBar, Toolbar, Typography, Box, Button} from '@mui/material'
+import {AppBar, Toolbar, Typography, Box, Button,  Tabs, Tab} from '@mui/material'
 const Header = () => {
     return (
-    <AppBar sx={{background: "#6ec23d" }}>
+    <AppBar 
+      position="sticky" 
+      sx={{background: "#6ec23d" 
+      }}
+    >
       <Toolbar>
         <Typography variant="h4">Save Me</Typography>
+        <Box display="flex">
+          <Tabs>
+            <Tab label="All Blogs"/>
+          </Tabs>
+        </Box>
         <Box display="flex" marginLeft="auto">
             <Button 
                 variant='contained' 
