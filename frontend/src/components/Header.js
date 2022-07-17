@@ -1,6 +1,7 @@
-import React from 'react'
+import React, { useState } from 'react'
 import {AppBar, Toolbar, Typography, Box, Button,  Tabs, Tab} from '@mui/material'
 const Header = () => {
+    const [value, setValue] = useState();
     return (
     <AppBar 
       position="sticky" 
@@ -10,7 +11,7 @@ const Header = () => {
       <Toolbar>
         <Typography variant="h4">Save Me</Typography>
         <Box display="flex">
-          <Tabs>
+          <Tabs value={value} onChange={(e,val)=>setValue(val)}>
             <Tab label="All Blogs"/>
             <Tab label="My Blogs"/>
           </Tabs>
