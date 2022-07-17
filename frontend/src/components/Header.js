@@ -30,6 +30,13 @@ const Header = () => {
             >
                 Signup
             </Button>
+            <Button 
+                variant='contained' 
+                sx={{margin:1,borderRadius:10}} 
+                color="warning"
+            >
+                Logout
+            </Button>
         </Box>
       </Toolbar>
     </AppBar>
