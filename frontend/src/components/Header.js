@@ -11,7 +11,11 @@ const Header = () => {
       <Toolbar>
         <Typography variant="h4">Save Me</Typography>
         <Box display="flex">
-          <Tabs value={value} onChange={(e,val)=>setValue(val)}>
+          <Tabs 
+            textColor='inherit'
+            value={value}
+            onChange={(e,val)=>setValue(val)}
+          >
             <Tab label="All Blogs"/>
             <Tab label="My Blogs"/>
           </Tabs>
