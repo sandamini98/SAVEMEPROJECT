@@ -11,7 +11,7 @@ const UserBlogs = () => {
   }
   useEffect(()=> {
     sendRequest().then((data)=>setBlogs(data.blogs.blogs));
-  },[])
+  }, []);
   console.log(blogs);
   return (
     <div>

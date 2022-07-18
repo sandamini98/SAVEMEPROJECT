@@ -1,9 +1,9 @@
 import React from 'react'
 
 const AddBlog = () => {
-  return (
-    <div>AddBlog</div>
-  )
-}
+  return <div>
+      
+  </div>;
+};
 
 export default AddBlog;
